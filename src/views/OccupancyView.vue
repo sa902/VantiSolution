@@ -32,7 +32,7 @@ const route = useRoute();
 const isValidRoute = computed(() => {
   let floors = [...records.floors, "all"];
   floors = floors.map((floor) => floor.replace(/\s/g, "").toLowerCase());
-  return floors.includes(records.selectedFloor.toLowerCase());
+  return floors.includes(records.getSelectedFloor);
 });
 
 onMounted(() => {

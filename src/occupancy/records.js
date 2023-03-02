@@ -42,11 +42,16 @@ export const useRecords = defineStore("records", () => {
     }
   });
 
+  const getSelectedFloor = computed(() => {
+    return selectedFloor.value.replace(/\s/g, "").toLowerCase();
+  });
+
   return {
     capacity,
     floors,
     history,
     selectedFloor,
     calculatedResponse,
+    getSelectedFloor,
   };
 });
