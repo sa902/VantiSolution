@@ -1,3 +1,7 @@
+# Solutions
+I have answered Tasks 1 and 2
+There are separate branches for each task so you can check the solutions independently!
+
 # Technical Assessment: Front End Developer
 
 This assessment helps Vanti to hire people suited for the role of **Front End Developer**. As part of this role you will
