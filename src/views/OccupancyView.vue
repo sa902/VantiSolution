@@ -32,11 +32,12 @@ const route = useRoute();
 const isValidRoute = computed(() => {
   let floors = [...records.floors, "all"];
   floors = floors.map((floor) => floor.replace(/\s/g, "").toLowerCase());
-  return floors.includes(route.params.floor.toLowerCase());
+  return floors.includes(records.selectedFloor.toLowerCase());
 });
 
 onMounted(() => {
-  records.selectedFloor = route.params.floor;
+  records.selectedFloor =
+    route.params.floor === undefined ? "all" : route.params.floor;
 });
 </script>
 
