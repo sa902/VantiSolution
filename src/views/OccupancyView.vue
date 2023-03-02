@@ -15,7 +15,6 @@ const records = useRecords();
 const route = useRoute();
 onMounted(() => {
   records.selectedFloor = route.params.floor;
-  console.log(`this is the router params ${route.params.floor}`);
 });
 </script>
 

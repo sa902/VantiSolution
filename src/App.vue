@@ -8,7 +8,10 @@
           v-for="floor in floors"
           :key="floor"
           link
-          :to="{ name: 'Occupancy', params: { floor: floor } }"
+          :to="{
+            name: 'Occupancy',
+            params: { floor: parseFloorForURL(floor) },
+          }"
           @click="handleFloorsSelection(floor)"
         >
           <v-list-item-content>
@@ -31,13 +34,15 @@
 
 <script setup>
 import { computed, ref } from "vue";
-import OccupancyTable from "@/occupancy/OccupancyTable.vue";
 import { useRecords } from "@/occupancy/records";
 
 const records = useRecords();
 const drawer = ref(true);
 const handleFloorsSelection = (floor) => {
   records.selectedFloor = floor;
+};
+const parseFloorForURL = (floor) => {
+  return floor.replace(/\s/g, "");
 };
 const floors = computed(() => {
   let calculatedFloors = [...records.floors];
