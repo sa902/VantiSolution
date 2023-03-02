@@ -35,9 +35,8 @@ export const useRecords = defineStore("records", () => {
       return history.value;
     } else {
       return history.value.filter(
-        (x) =>
-          x.floor.replace(/\s/g, "").toLowerCase() ===
-          selectedFloor.value.replace(/\s/g, "").toLowerCase()
+        (item) =>
+          item.floor.replace(/\s/g, "").toLowerCase() === getSelectedFloor.value
       );
     }
   });
