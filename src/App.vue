@@ -18,11 +18,7 @@
       <v-toolbar-title> Vanti Front End Dev Assessment </v-toolbar-title>
     </v-app-bar>
     <v-main>
-      <v-container>
-        <v-card>
-          <occupancy-table />
-        </v-card>
-      </v-container>
+      <router-view />
     </v-main>
   </v-app>
 </template>
