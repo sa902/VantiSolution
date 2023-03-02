@@ -7,7 +7,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/:floor?",
-    name: "Home",
+    name: "Occupancy",
     component: OccupancyView,
   },
 ];

@@ -4,8 +4,14 @@
       <div class="d-flex text-h6 justify-center py-5">Available Floors</div>
       <v-divider />
       <v-list nav>
-        <v-list-item v-for="floor in floors" :key="floor" link>
-          <v-list-item-content @click="handleFloorsSelection(floor)">
+        <v-list-item
+          v-for="floor in floors"
+          :key="floor"
+          link
+          :to="{ name: 'Occupancy', params: { floor: floor } }"
+          @click="handleFloorsSelection(floor)"
+        >
+          <v-list-item-content>
             <v-list-item-title class="d-flex justify-center">
               {{ floor }}
             </v-list-item-title>
