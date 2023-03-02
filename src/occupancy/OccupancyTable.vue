@@ -1,5 +1,5 @@
 <template>
-  <v-data-table :items="records.history" :headers="headers"/>
+  <v-data-table :items="records.calculatedResponse" :headers="headers"/>
 </template>
 
 <script setup>
