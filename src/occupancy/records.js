@@ -35,14 +35,6 @@ export const useRecords = defineStore("records", () => {
       return history.value;
     } else {
       return history.value.filter(
-<<<<<<< HEAD
-        (x) =>
-          x.floor.replace(/\s/g, "").toLowerCase() ===
-          selectedFloor.value.replace(/\s/g, "").toLowerCase()
-      );
-    }
-  });
-=======
         (item) =>
           item.floor.replace(/\s/g, "").toLowerCase() === getSelectedFloor.value
       );
@@ -52,7 +44,6 @@ export const useRecords = defineStore("records", () => {
   const getSelectedFloor = computed(() => {
     return selectedFloor.value.replace(/\s/g, "").toLowerCase();
   });
->>>>>>> 47fb73c8276bdcf7d407ba31e4a5414e782def28
 
   return {
     capacity,
@@ -60,9 +51,6 @@ export const useRecords = defineStore("records", () => {
     history,
     selectedFloor,
     calculatedResponse,
-<<<<<<< HEAD
-=======
     getSelectedFloor,
->>>>>>> 47fb73c8276bdcf7d407ba31e4a5414e782def28
   };
 });
